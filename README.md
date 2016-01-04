@@ -1,6 +1,21 @@
 # angular-admin
 ## 打造纯前端的web后台..
 
-### TODOLIST
-- node http 比较慢 ，选用nginx代替
-- run `setup.sh`
+### nginx conf
+`
+http {
+	include       mime.types;
+	sendfile        on;
+	keepalive_timeout  65;
+
+	server {
+		listen       80;
+		server_name  angular-admin.cn;
+
+		location / {
+			root   /angular-admin/root;
+			index  src/index.html ;
+		}
+	}
+}
+`
