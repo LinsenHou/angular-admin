@@ -7,7 +7,6 @@ http {
 	include       mime.types;
 	sendfile        on;
 	keepalive_timeout  65;
-
 	server {
 		listen       80;
 		server_name  angular-admin.cn;
