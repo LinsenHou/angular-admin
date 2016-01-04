@@ -2,7 +2,7 @@
 ## 打造纯前端的web后台..
 
 ### nginx conf
-`
+<code>
 http {
 	include       mime.types;
 	sendfile        on;
@@ -17,4 +17,4 @@ http {
 		}
 	}
 }
-`
+</code>
