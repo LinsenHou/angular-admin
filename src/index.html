@@ -1,1 +1,27 @@
-<h1> hello</h1>
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>打造纯前端的web后台</title>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css"/>
+</head>
+<body ng-app="app">
+<!--[if lte IE 8]><p class="browsehappy">您使用的浏览器版本已经过时，请使用 chrome 获得最佳体验！</p><![endif]-->
+<div ng-include="'app/template/index.tpl'"></div>
+<div class="container">
+    <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+</div>
+</body>
+
+<!-- build:js combo/lib.js -->
+<script src="../node_modules/angular/angular.min.js"></script>
+<script src="../dist/app.min.js"></script>
+</html>
