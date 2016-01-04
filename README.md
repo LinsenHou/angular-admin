@@ -10,7 +10,6 @@ http {
 	server {
 		listen       80;
 		server_name  angular-admin.cn;
-
 		location / {
 			root   /angular-admin/root;
 			index  src/index.html ;
