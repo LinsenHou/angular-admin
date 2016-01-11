@@ -9,19 +9,19 @@
     <meta charset="UTF-8">
     <title>打造纯前端的web后台</title>
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css"/>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
 
-    <script src="/node_modules/angular/angular.min.js"></script>
-    <script src="/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
 </head>
 <body ng-app="app">
 <!--[if lte IE 8]><p class="browsehappy">您使用的浏览器版本已经过时，请使用 chrome 获得最佳体验！</p><![endif]-->
 <div id="AppDiv">
-    <div ng-include="'/src/app/template/index.tpl'"></div>
+    <div ng-include="'app/template/index.tpl'"></div>
 </div>
 
-<script src="/dist/app.js"></script>
+<script src="dist/app.js"></script>
 </body>
 </html>

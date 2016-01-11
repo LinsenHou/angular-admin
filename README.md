@@ -2,18 +2,23 @@
 ## 打造纯前端的web后台..
 
 ### nginx conf
-<code>
-http {
-	include       mime.types;
-	sendfile        on;
-	keepalive_timeout  65;
-	server {
-		listen       80;
-		server_name  angular-admin.cn;
-		location / {
-			root   /angular-admin/root;
-			index  src/index.html ;
-		}
-	}
+-本项目以nginx为例
+```nginx
+server {
+        listen  80;     server_name  angular.cn;
+
+        root  /home/workspace/angular-admin/src;
+        index index.html;
+
+        location ^~ /app {
+                root /home/workspace/angular-admin/src/;
+        }
+        location ^~ /node_modules {
+                root /home/workspace/angular-admin/;
+        }
+        location ^~ /dist {
+                root /home/workspace/angular-admin/;
+                expires off;
+        }
 }
-</code>
+`
