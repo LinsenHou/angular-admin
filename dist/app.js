@@ -3,8 +3,11 @@ var app = angular.module("app", ['ngRoute']);
 
 angular.module('app').config(['$routeProvider', function ($routeProvider) {
     $routeProvider
+        .when('/', {
+            redirectTo: '/demo'
+        })
         .when('/demo', {
-            templateUrl : '/src/app/template/demo/index.tpl',
+            templateUrl : 'app/template/demo/index.tpl',
             controller  : 'demoCtrl'
         })
         .otherwise({
@@ -42,6 +45,13 @@ angular.module('app')
 angular.module("app")
     .controller("demoCtrl", function ($scope) {
         $scope.now = Date.parse(new Date());
-        console.log(now,123123);
+        console.log($scope.now,123123);
+    })
+;
+
+angular.module("app")
+    .controller("indexCtrl", function ($scope,$location) {
+        console.log('start angular app');
+        $location.url('/');
     })
 ;
