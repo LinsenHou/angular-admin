@@ -1,19 +1,16 @@
-angular.module('app')
-    .controller('app.indexCtrl', function ($scope, Menu, APPENV) {
-        $scope.menuData = [];
-        MenuSvc.getAll().then(function (data) {
-            $scope.menuData = data;
+
+var app = angular.module("app", ['ngRoute']);
+
+angular.module('app').config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+        .when('/demo', {
+            templateUrl : '/src/app/template/demo/index.tpl',
+            controller  : 'demoCtrl'
+        })
+        .otherwise({
+            redirectTo : '/demo'
         });
-        $scope.APPENV = APPENV;
-    });
-angular.module("app")
-    .controller("app.user.listCtrl", function ($scope) {
-        $scope.now = Date.parse(new Date());
-    })
-;
-
-
-
+}]);
 angular.module('app')
     .service('MenuSvc', function (Api) {
         this.getAll = function (params) {
@@ -39,3 +36,12 @@ angular.module('app')
             return baseApi.post('/user/delete', params);
         }
     });
+
+
+
+angular.module("app")
+    .controller("demoCtrl", function ($scope) {
+        $scope.now = Date.parse(new Date());
+        console.log(now,123123);
+    })
+;

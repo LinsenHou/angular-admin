@@ -1,5 +1,6 @@
 angular.module("app")
-    .controller("app.user.listCtrl", function ($scope) {
+    .controller("demoCtrl", function ($scope) {
         $scope.now = Date.parse(new Date());
+        console.log(now,123123);
     })
 ;
