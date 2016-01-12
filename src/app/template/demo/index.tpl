@@ -1,9 +1,9 @@
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+<nav class="navbar navbar-default">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
-                <img src="app/assets/favicon.ico" style="width: 36px;" alt=""/>
+                <img src="app/assets/favicon.ico" style="width: 30px;" alt=""/>
             </a>
             <a class="navbar-brand" href="#">
                 打造基于Angular纯前端的Web项目
@@ -35,6 +35,8 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
+
+<div class="container">
 
 <div class="row">
     <div class="col-xs-3">
@@ -80,4 +82,5 @@
             </div>
         </form>
     </div>
+</div>
 </div>
