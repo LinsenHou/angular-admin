@@ -1,0 +1,226 @@
+.ui-alert-modal .modal-dialog {
+	height: 100%;
+}
+.ui-alert-modal .modal-content {
+	top : 30%;
+}
+.ui-alert-modal .modal-body {
+	padding-bottom: 5px;
+}
+.ui-alert-modal .modal-footer {
+	border-top:0;
+	padding: 5px 15px 15px;
+}
+.ui-confirm-modal .modal-dialog {
+	height: 100%;
+}
+.ui-confirm-modal .modal-content {
+	top : 30%;
+}
+.ui-confirm-modal .modal-body {
+	padding-bottom: 5px;
+}
+.ui-confirm-modal .modal-footer {
+	border-top:0;
+	padding: 5px 15px 15px;
+}
+.ui-date-picker-date-time {
+    position: absolute;
+    display: block;
+}
+[ui-date-picker-wrapper] {
+    position: absolute;
+    min-width: 220px;
+    z-index: 10;
+    display: block;
+    font-size: 14px;
+}
+[ui-date-time-append] [ui-date-picker-wrapper] [ui-date-picker] {
+    margin-top: -30px;
+}
+[ui-date-time-append] [ui-date-picker] {
+    position: relative;
+    margin-right: -1000px;
+    margin-bottom: -1000px;
+}
+[ui-date-range] [ui-date-picker] .after.before {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #499dcd;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f6ab4', GradientType=0);
+    border-color: #2f6ab4 #2f6ab4 #1f4677;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #2f6ab4;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+[ui-date-range] [ui-date-picker] .after.before:hover,
+[ui-date-range] [ui-date-picker] .after.before:active,
+[ui-date-range] [ui-date-picker] .after.before.active,
+[ui-date-range] [ui-date-picker] .after.before[disabled] {
+  color: #ffffff;
+  background-color: #2f6ab4;
+  *background-color: #2a5ea0;
+}
+[ui-date-range] [ui-date-picker] .after.before:active,
+[ui-date-range] [ui-date-picker] .after.before.active {
+  background-color: #24528c \9;
+}
+[ui-date-picker].hidden {
+  display: none;
+}
+[ui-date-picker] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-color: #fff;
+  /* GENERAL */
+  padding: 4px;
+  /* SPECIFIC */
+}
+[ui-date-picker] table {
+  margin: 0;
+}
+[ui-date-picker] td,
+[ui-date-picker] th {
+  padding: 4px 5px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+}
+[ui-date-picker] .switch {
+  width: 145px;
+}
+[ui-date-picker] button {
+  display: block;
+  width: 23%;
+  height: 26px;
+  line-height: 26px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  text-align: center;
+  padding: 0;
+}
+[ui-date-picker] button:active {
+  border:none;
+}
+[ui-date-picker] button:hover {
+  background: #eeeeee;
+}
+[ui-date-picker] button.text-muted,
+[ui-date-picker] button.text-muted:hover {
+  background: none;
+  color: #999999;
+  cursor: default;
+}
+[ui-date-picker] button[disabled],
+[ui-date-picker] button[disabled]:hover {
+  cursor: not-allowed;
+  background: none;
+  color: #999999;
+}
+[ui-date-picker] .active,
+[ui-date-picker] .now {
+  color: #ffffff;
+  background-color: #006dcc;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+  *background-color: #0044cc;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+[ui-date-picker] .active:hover,
+[ui-date-picker] .now:hover,
+[ui-date-picker] .active:active,
+[ui-date-picker] .now:active,
+[ui-date-picker] .active.active,
+[ui-date-picker] .now.active,
+[ui-date-picker] .active[disabled],
+[ui-date-picker] .now[disabled] {
+    color: #ffffff;
+    background-color: #0044cc;
+    *background-color: #003bb3;
+}
+[ui-date-picker] .active:active,
+[ui-date-picker] .now:active,
+[ui-date-picker] .active.active,
+[ui-date-picker] .now.active {
+    background-color: #003399 \9;
+}
+[ui-date-picker] .now {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #ee735b;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffee905b', GradientType=0);
+    *background-color: #ee905b;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+[ui-date-picker] .now:hover,
+[ui-date-picker] .now:active,
+[ui-date-picker] .now.active,
+[ui-date-picker] .now[disabled] {
+  color: #ffffff;
+  background-color: #ee905b;
+  *background-color: #ec8044;
+}
+[ui-date-picker] .now:active,
+[ui-date-picker] .now.active {
+  background-color: #e9712d \9;
+}
+[ui-date-picker] [disabled] {
+  background: none;
+  color: #999999 !important;
+  cursor: default;
+}
+[ui-date-picker] [ng-switch-when="year"] button,
+[ui-date-picker] [ng-switch-when="month"] button,
+[ui-date-picker] [ng-switch-when="minutes"] button {
+  height: 54px;
+  line-height: 54px;
+}
+[ui-date-picker] [ng-switch-when="date"] td {
+  padding: 0;
+}
+[ui-date-picker] [ng-switch-when="date"] button {
+  width: 100%;
+  height: 26px;
+  line-height: 26px;
+}
+[ui-date-picker] th:hover,
+[ui-date-picker] [ng-switch-when="date"] td button:hover {
+  background: #eeeeee;
+}
+.webuploader-container {
+    position: relative;
+}
+.webuploader-pick-hover {}
+.webuploader-pick-disable{opacity:.6;pointer-events:none}
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+
+.webuploader-container.btn {
+	padding : 0;
+}
+.webuploader-container.btn .webuploader-pick {
+	padding: 6px 12px;
+}

@@ -7,65 +7,76 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg    : grunt.file.readJSON('package.json'),
         concat : {
-            css  : {
-                src  : ['src/app/*/*.css'],
-                dest : 'dist/app.css'
-            },
-            dist : {
-                src  : [
-                    'src/app/entry.js',
-                    'src/app/conf/*.js',
-                    'src/app/service/*.js',
-                    'src/app/filter/*.js',
-                    'src/app/directive/*.js',
-                    'src/app/controller/*.js'
-                ],
-                dest : 'dist/app.js'
+            app : {
+                files : [
+                    {
+                        src  : [
+                            'src/app/entry.js',
+                            'src/app/conf/*.js',
+                            'src/app/service/*.js',
+                            'src/app/filter/*.js',
+                            'src/app/directive/*.js',
+                            'src/app/controller/*.js'
+                        ],
+                        dest : 'dist/app.js'
+                    },
+                    {
+                        src  : [
+                            'src/components/ui-alert/*.js',
+                            'src/components/ui-confirm/*.js',
+                            'src/components/ui-datepicker/*.js',
+                            'src/components/ui-menu/*.js',
+                            'src/components/ui-select/*.js',
+                            'src/components/ui-validate/*.js',
+                            'src/components/ui-webuploader/*.js',
+                            'src/components/entry.js'
+                        ],
+                        dest : 'dist/components.js'
+                    },
+                    {
+                        src  : ['src/app/*/*.css'],
+                        dest : 'dist/app.css'
+                    },
+                    {
+                        src  : ['src/components/*/*.css'],
+                        dest : 'dist/components.css'
+                    }
+                ]
             }
         },
-
         uglify : {
-            build : {
+            app        : {
                 src  : 'dist/app.js',
                 dest : 'dist/app.min.js'
+            },
+            components : {
+                src  : 'dist/components.js',
+                dest : 'dist/components.min.js'
             }
         },
-
         cssmin : { //css文件压缩
-            css : {
+            app        : {
                 src  : 'dist/app.css',//将之前的all.css
                 dest : 'dist/app.min.css'  //压缩
-            }
-        },
-
-        watch  : {
-            files: ['src/app/*/*.*','src/index.html','src/app/entry.js'],
-            tasks: ['concat', 'uglify', 'cssmin']
-        },
-
-        components : {
-            css  : {
-                src  : ['src/components/*/*.css'],
-                dest : 'dist/components.css'
             },
-            dist : {
-                src  : [
-                    'src/components/entry.js',
-                    'src/components/*/*.js',
-                ],
-                dest : 'dist/components.js'
+            components : {
+                src  : 'dist/components.css',//将之前的all.css
+                dest : 'dist/components.min.css'  //压缩
             }
+
+
+        },
+        watch  : {
+            files : ['src/app/*/*.*', 'src/index.html', 'src/app/entry.js'],
+            tasks : ['concat', 'uglify', 'cssmin']
         }
     });
-
-
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-css');
     grunt.loadNpmTasks('grunt-contrib-livereload');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'uglify', 'cssmin','components']);
+    grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 }
