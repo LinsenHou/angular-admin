@@ -41,6 +41,20 @@ module.exports = function (grunt) {
         watch  : {
             files: ['src/app/*/*.*','src/index.html','src/app/entry.js'],
             tasks: ['concat', 'uglify', 'cssmin']
+        },
+
+        components : {
+            css  : {
+                src  : ['src/components/*/*.css'],
+                dest : 'dist/components.css'
+            },
+            dist : {
+                src  : [
+                    'src/components/entry.js',
+                    'src/components/*/*.js',
+                ],
+                dest : 'dist/components.js'
+            }
         }
     });
 
@@ -53,5 +67,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['concat', 'uglify', 'cssmin','components']);
 }

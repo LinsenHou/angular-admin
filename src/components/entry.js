@@ -1,0 +1,1 @@
+angular.module('components', ["ui.bootstrap", "components.ui.confirm", "components.ui.menu", "components.ui.datepicker", "components.ui.alert", "ui.validate", "components.webuploader", "ui.select"]);
