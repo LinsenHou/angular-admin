@@ -1,84 +1,84 @@
-<nav class="navbar navbar-default">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img src="app/assets/favicon.ico" style="width: 30px;" alt=""/>
-            </a>
-            <a class="navbar-brand" href="#">
-                打造基于Angular纯前端的Web项目
-            </a>
-        </div>
+<div class="app-header navbar">
+<!-- navbar header -->
+<div class="navbar-header bg-dark">
+    <button class="pull-right visible-xs dk" data-toggle="class:show" data-target=".navbar-collapse">
+        <i class="glyphicon glyphicon-cog"></i>
+    </button>
+    <button class="pull-right visible-xs" data-toggle="class:off-screen" data-target=".app-aside" ui-scroll="app">
+        <i class="glyphicon glyphicon-align-justify"></i>
+    </button>
+    <!-- brand -->
+    <a href="#/" class="navbar-brand text-lt">
+        <i class="fa fa-btc"></i>
+        <span class="hidden-folded m-l-xs">Angulr</span>
+    </a>
+    <!-- / brand -->
+</div>
+<!-- / navbar header -->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </form>
-                </li>
-                <li class="dropdown">
-                    <ul class="dropdown-menu">
-                        <li><a href="#">登录</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
+<!-- navbar collapse -->
+<div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
+<!-- buttons -->
+<div class="nav navbar-nav hidden-xs">
+    <a href="#" class="btn no-shadow navbar-btn" data-toggle="class:app-aside-folded" data-target=".app">
+        <i class="fa fa-dedent fa-fw text"></i>
+        <i class="fa fa-indent fa-fw text-active"></i>
+    </a>
+</div>
+<!-- / buttons -->
+
+<!-- link and dropdown -->
+<ul class="nav navbar-nav hidden-sm">
+    <li class="dropdown pos-stc">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+            <span>Mega</span>
+            <span class="caret"></span>
+        </a>
+    </li>
+</ul>
+<!-- / link and dropdown -->
+
+<!-- search form -->
+<form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-sm bg-light no-border rounded padder" placeholder="Search projects...">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
-</nav>
+</form>
+<!-- / search form -->
 
-<div class="container">
+<!-- nabar right -->
+<ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle clear">
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                <i class="on md b-white bottom"></i>
+              </span>
+            <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
+        </a>
+    </li>
+</ul>
+<!-- / navbar right -->
 
-    <div class="row">
-        <div class="col-xs-3">
-            <nav class="navbar-default navbar-static-side">
-                <li class="nav-header">
-                    <span class="block m-t-xs"> <strong class="font-bold"></strong>业务中心</span>
-                </li>
-                <div class="sidebar-collapse">
-                    <div id="side-menu" ui-menu root-data="menuData"></div>
-                </div>
+</div>
+<!-- buttons -->
+
+</div>
+<!-- / navbar collapse -->
+</div>
+
+<!-- nav -->
+<div class="app-aside hidden-xs bg-dark">
+    <div class="aside-wrap">
+        <div class="navi-wrap">
+            <nav class="navi">
+                <div id="side-menu" ui-menu root-data="menuData"></div>
             </nav>
-        <div class="col-xs-9">
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Remember me
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Sign in</button>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
 </div>
+<!-- nav -->

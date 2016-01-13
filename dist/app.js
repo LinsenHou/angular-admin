@@ -43,8 +43,27 @@ angular.module('app')
 
 angular.module("app")
     .controller("demoCtrl", function ($scope) {
-        $scope.now = Date.parse(new Date());
-        console.log($scope.now,123123);
+        $scope.menuData = [
+            {
+                id: 1000,
+                title: "系统设置",
+                url: "",
+                children: [
+                    {
+                        id: 1001,
+                        title: "权限管理",
+                        url: "/aaa/",
+                        children: [ ]
+                    },
+                    {
+                        id: 1001,
+                        title: "人员管理",
+                        url: "/bbb/",
+                        children: [ ]
+                    }
+                ]
+            }
+        ];
     })
 ;
 
