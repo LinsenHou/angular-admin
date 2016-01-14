@@ -1,11 +1,14 @@
 # angular-admin
 ## 打造纯前端的web后台..
 
-- 本项目以nginx为例,nginx.conf 如下：
+
+## Installation
+ 
+设置你的nginx,使得静态资源的正确访问：
 ```nginx
 server {
         listen  80;   
-        server_name  angular.cn;
+        server_name  angular-admin.cn;
 
         root  /home/workspace/angular-admin/src;
         index index.html;
@@ -23,8 +26,10 @@ server {
 }
 ```
 
-- 项目启动
 ```sh
+git clone https://github.com/zhangliang-phper/angular-admin.git
 npm install  # 安装依赖包
 grunt  # 运行grunt default task 
 ```
+
+现在，打开浏览器 angular-admin.cn即可访问；
