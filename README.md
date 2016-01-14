@@ -21,10 +21,10 @@ server {
                 expires off;
         }
 }
-`
-
 ```
+
+- 项目启动
+```sh
 npm install  # 安装依赖包
 grunt  # 运行grunt default task 
-
 ```
