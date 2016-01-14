@@ -1,6 +1,5 @@
-# angular-admin
-## 打造纯前端的web后台..
-
+## angular-admin
+打造纯前端的web后台..
 
 ## Installation
  
